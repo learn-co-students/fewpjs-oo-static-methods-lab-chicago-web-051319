@@ -15,12 +15,12 @@ class Formatter {
     const array = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
     let sentence = string.slice()
     let words = sentence.split(" ")
-    
-    words[0] = Formatter.capitalize(words[0]);
+
+    words[0] = this.capitalize(words[0]);
 
     words = words.map((word) => {
       if (!array.includes(word)) {
-        word = Formatter.capitalize(word)
+        word = this.capitalize(word)
       }
       return word;
     });
